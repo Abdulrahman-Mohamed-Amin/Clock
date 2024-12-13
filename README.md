@@ -1,6 +1,7 @@
 # Wall Clock
 
 Wall Clock is a simple web-based project that displays a real-time clock using HTML, CSS, and JavaScript. It's designed as a minimalist and functional tool to showcase time in an elegant format.
+- [Project Demo](https://abdulrahman-mohamed-amin.github.io/Clock/)
 
 ## Features
 - **Real-Time Clock**: Updates every second.
