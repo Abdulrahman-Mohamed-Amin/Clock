@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    transition: 0.2s ease;
+    box-sizing: border-box;
+}
+
+.clock_container{
+    height: 100vh;
+    position: relative;
+}
+.clock_container.add_dark {
+background: #000;
+}
+
+.clock_container .clock{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    /* background: #ccc; */
+}
+
+.clock .sec ,.clock .min , .clock .hour{
+    position: absolute;
+    width: 3px;
+    background: darkred;
+    height: 50%;
+    top:0; left: 50%;
+    transform: translateX(-50%);
+    transform-origin: bottom center;
+}
+.clock .min{
+    background: #000;
+    height: 40%;
+    top: 28px;
+}
+.clock_container.add_dark .min{
+    background: #fff;
+}
+.clock .hour{
+    background: #000;
+    height: 30%;
+    top: 58px;
+}
+.clock_container.add_dark .hour{
+    background: #fff;
+}
+.clock .sec::before{
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border:2px solid darkred;
+    border-radius: 50%;
+    left: 50%;
+    bottom: -6px;
+    transform: translateX(-50%);
+}
+
+.clock .time{
+    font-weight: 500;
+    font-size: 3rem;
+    position: absolute;
+    bottom: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 5px;
+}
+.clock_container.add_dark .time{
+    color: #fff;
+}
+.clock .date{
+    /* background: #000; */
+    color: #777;
+    display: flex;
+    gap: 8px;
+    font-size: 14px;
+    position: absolute;
+    bottom: -90px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.month-num{
+    color: #fff;
+    background: #000;
+    border-radius: 50%;
+    padding: 3px 5px;
+}
+.clock_container.add_dark .month-num{
+    color: #000;
+    background: #fff;
+}
+.dark{
+    background: #000;
+    color: #fff;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    font-weight: 700;
+    padding: 7px 5px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -50px;
+    cursor: pointer;
+}
+.clock_container.add_dark  .dark{
+    color: #000;
+    background: #fff;
+}
